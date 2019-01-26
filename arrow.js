@@ -22,8 +22,9 @@ console.log(sum(1, 2, 3, 4));
 const sum2 = (...props) => {
     const params2 = Array.prototype.slice.call(props);
     if (!params2.length) return 0;
-    return params2.reduce = (prev2, next2) => {
+    params2.reduce((prev2, next2) => {
         (prev2 + next2);
-    }
+    });
 };
+
 console.log(sum2(1, 9, 5));

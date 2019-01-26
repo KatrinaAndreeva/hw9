@@ -3,14 +3,12 @@
 // первый аргумент и массив из остатка: func(‘a’, ‘b’, ‘c’, ‘d’)→ 
 // { first: ‘a’, other: [‘b’, ‘c’, ‘d’] }
 
-const arr = ['a', 'b', 'c', 'd', 'e'];
-
-function newArr() {
-    const [a, ...other] = [arr];
-    return (a + other);
+let arr = ([a, ...other]) => {
+    console.log(a);
+    console.log(other);
 };
+arr(['a', 'b', 'c', 'd', 'e']);
 
-console.log(newArr());
 
 //2. Организовать функцию getInfo, которая принимает объект вида{ name: ..., 
 // info: { employees: [...], partners: [ … ]  } }и выводит в консоль имя
@@ -20,3 +18,19 @@ console.log(newArr());
 // info: { employees: [‘Vlad’, ‘Olga’], 
 //partners: ['Microsoft', 'Facebook', 'Xing']   } 
 // };getInfo(organisation); → Name: Google Partners: Microsoft Facebooka
+
+let obj = {
+    name: 'Google',
+    info: {
+        employees: ['vlad', 'Olga'],
+        partners: ['Micrposoft', 'Facebook', 'Xing']
+    }
+};
+
+function getInfo() {
+    if (obj.name == '') console.log('Unknown');
+    const [partner1, partner2] = obj.info.partners;
+    console.log(obj.name);
+    console.log(partner1, partner2);
+};
+getInfo();
