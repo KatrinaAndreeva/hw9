@@ -5,10 +5,12 @@
 
 const arr = ['a', 'b', 'c', 'd', 'e'];
 
-function getANum() {
-    const [a, other] = arr;
-}
+function newArr() {
+    const [a, ...other] = [arr];
+    return (a + other);
+};
 
+console.log(newArr());
 
 //2. Организовать функцию getInfo, которая принимает объект вида{ name: ..., 
 // info: { employees: [...], partners: [ … ]  } }и выводит в консоль имя
@@ -17,4 +19,4 @@ function getANum() {
 //const organisation = {    name: 'Google',   
 // info: { employees: [‘Vlad’, ‘Olga’], 
 //partners: ['Microsoft', 'Facebook', 'Xing']   } 
-// };getInfo(organisation); → Name: Google Partners: Microsoft Facebook
+// };getInfo(organisation); → Name: Google Partners: Microsoft Facebooka
