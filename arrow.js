@@ -19,12 +19,12 @@ function sum() {
 
 console.log(sum(1, 2, 3, 4));
 
-const sum2 = (...props) => {
-    const params2 = Array.prototype.slice.call(props);
+
+const sum2 = (...args) => {
+    const params2 = Array.prototype.slice.call(args);
     if (!params2.length) return 0;
-    params2.reduce((prev2, next2) => {
-        (prev2 + next2);
+    return params2.reduce((prev, next) => {
+        return (prev + next);
     });
 };
-
-console.log(sum2(1, 9, 5));
+console.log(sum2(1, 2, 3, 4));

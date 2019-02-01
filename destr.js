@@ -32,5 +32,6 @@ function getInfo() {
     const [partner1, partner2] = obj.info.partners;
     console.log(obj.name);
     console.log(partner1, partner2);
-};
+}
+
 getInfo();
